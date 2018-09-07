@@ -7,6 +7,7 @@ We can choose 2 types of gameplay:
 
 
 We can choose our type:
+
 ![alt text](https://github.com/spitomot/Java-Tic-Tac-Toe-with-GUI/blob/master/p2.PNG)
 
 The actual game board + game over frame:
