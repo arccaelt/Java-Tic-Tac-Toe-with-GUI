@@ -91,17 +91,19 @@ public class TTCBoard
 	{
 		if(board[0][0] != empty_cell)
 		{
-			for(int i = 1; i < board.length; i++)
+			boolean is_good = true;
+			for(int i = 1; i < board.length && is_good; i++)
 			{
 				if(board[i][i] == empty_cell || board[i][i] != board[i - 1][i - 1])
-					return 0;
+					is_good = false;
 			}
-			return 1;
+			if(is_good)
+				return 1;
 		}
 		
-		if(board[0][board.length - 1] != empty_cell)
+		if(board[0][2] != empty_cell)
 		{
-			for(int i = 1, j = board.length - 2; i < board.length; i++, j--)
+			for(int i = 1, j = 1; i < board.length; i++, j--)
 			{
 				if(board[i][j] == empty_cell || board[i][j] != board[i - 1][j + 1])
 					return 0;
